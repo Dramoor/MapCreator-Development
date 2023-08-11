@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QXvVCmZfuI/EFVN6Uq9xr5X9yQaN8RN0M9/J8gdjHB5BY1wB/qhhe70LFn3lLdWHSn3xxj2o/s3XCBdh5MKpHQ==",
+  "success": true,
+  "projectFilePath": "W:\\Development\\Utility\\Current Project\\MapCreator_OSI_version\\Cartography\\Cartography.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aasro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.8\\microsoft.windowsdesktop.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\aasro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.8\\microsoft.netcore.app.ref.7.0.8.nupkg.sha512",
+    "C:\\Users\\aasro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.8\\microsoft.aspnetcore.app.ref.7.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}
