@@ -17,25 +17,20 @@ namespace MapCreator.userPlugin
     public partial class fileTypeConverters : Form
     {
         MUL2UOPConverter conv;
+
         private int m_Total, m_Success;
 
         public fileTypeConverters()
         {
+            MaximizeBox = false;
+            MinimizeBox = false;
+
             conv = new MUL2UOPConverter();
+
             InitializeComponent();
         }
 
-        private string FixPath1(string file)
-        {
-            return (file == null) ? null : Path.Combine(mul2uopConverter_textBox01_mulLocation.Text, file);
-        }
-
-        private string FixPath2(string file)
-        {
-            return (file == null) ? null : Path.Combine(uop2mulConverter_textBox01_uopLocation.Text, file);
-        }
-
-        /// MUL To BMP
+        /// .MUL -> .BMP
         private void mul2bmpConverter_searchButton01_compiledFacetLocation_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -114,45 +109,32 @@ namespace MapCreator.userPlugin
             communityCreditsForm.Show();
         }
 
-
-        ///MUL To UOP
-        private void mul2uopConverter_searchButton01_mulLocation_Click(object sender, EventArgs e)
+        /// .MUL <-> .UOP
+        private string FixPath(string file)
         {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog()
-            {
-                SelectedPath = this.mul2uopConverter_textBox01_mulLocation.Text
-            };
-            if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                this.mul2uopConverter_textBox01_mulLocation.Text = folderBrowserDialog.SelectedPath;
-            }
+            return (file == null) ? null : Path.Combine(mul2uopConverter_textBox01_facetFileLocation.Text, file);
         }
 
-        private void mul2uopConverter_textBox01_mulLocation_Load(object sender, EventArgs e)
-        {
-            this.mul2uopConverter_textBox01_mulLocation.Text = Directory.GetCurrentDirectory();
-        }
-
-        private void PackMUL2UOP(string inFile, string inIdx, string outFile, MUL2UOP type, int typeIndex)
+        private void Pack(string inFile, string inIdx, string outFile, FileType type, int typeIndex)
         {
             try
             {
-                statusInfoText.Text = inFile;
+                mul2uopConverter_statusInfoText.Text = inFile;
 
                 Refresh();
-                inFile = FixPath1(inFile);
+                inFile = FixPath(inFile);
 
                 if (!File.Exists(inFile))
                     return;
 
-                outFile = FixPath1(outFile);
+                outFile = FixPath(outFile);
 
                 if (File.Exists(outFile))
                 {
                     return;
                 }
 
-                inIdx = FixPath1(inIdx);
+                inIdx = FixPath(inIdx);
                 ++m_Total;
 
                 conv.ToUOP(inFile, inIdx, outFile, type, typeIndex);
@@ -165,9 +147,57 @@ namespace MapCreator.userPlugin
             }
         }
 
+        private void Extract(string inFile, string outFile, string outIdx, FileType type, int typeIndex)
+        {
+            try
+            {
+                mul2uopConverter_statusInfoText.Text = inFile;
+
+                Refresh();
+                inFile = FixPath(inFile);
+
+                if (!File.Exists(inFile))
+                    return;
+
+                outFile = FixPath(outFile);
+
+                if (File.Exists(outFile))
+                {
+                    return;
+                }
+
+                outIdx = FixPath(outIdx);
+                ++m_Total;
+
+                conv.FromUOP(inFile, outFile, outIdx, type, typeIndex);
+                ++m_Success;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("An error occured while performing the action");
+            }
+        }
+
+        private void mul2uopConverter_searchButton01_mulLocation_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog()
+            {
+                SelectedPath = this.mul2uopConverter_textBox01_facetFileLocation.Text
+            };
+            if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                this.mul2uopConverter_textBox01_facetFileLocation.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        private void mul2uopConverter_textBox01_mulLocation_Load(object sender, EventArgs e)
+        {
+            this.mul2uopConverter_textBox01_facetFileLocation.Text = Directory.GetCurrentDirectory();
+        }
+
         private void mul2uopConverter_convertFacet2UOPButton_Click(object sender, EventArgs e)
         {
-            if (mul2uopConverter_textBox01_mulLocation.Text == string.Empty || mul2uopConverter_textBox01_mulLocation.Text == null)
+            if (mul2uopConverter_textBox01_facetFileLocation.Text == string.Empty || mul2uopConverter_textBox01_facetFileLocation.Text == null)
             {
                 MessageBox.Show(" ERROR: You Must Specify The Location Path\n Of The [.mul] Files You Want Converted!");
                 return;
@@ -175,15 +205,15 @@ namespace MapCreator.userPlugin
 
             if (mul2uopConverter_custom255Selection.Checked)
             {
-                for (int i = 0; i <= 255; ++i)
+                for (int i = 0; i <= 250; ++i)
                 {
                     string map = String.Format("map{0}", i);
 
-                    PackMUL2UOP(map + ".mul", null, map + "LegacyMUL.uop", MUL2UOP.MapLegacyMUL, i);
-                    PackMUL2UOP(map + "x.mul", null, map + "xLegacyMUL.uop", MUL2UOP.MapLegacyMUL, i);
+                    Pack(map + ".mul", null, map + "LegacyMUL.uop", FileType.MapLegacyMUL, i);
+                    Pack(map + "x.mul", null, map + "xLegacyMUL.uop", FileType.MapLegacyMUL, i);
                 }
 
-                statusInfoText.Text = string.Format("Done ({0}/{1} files converted)", m_Success, m_Total);
+                mul2uopConverter_statusInfoText.Text = string.Format("Done ({0}/{1} files converted)", m_Success, m_Total);
             }
             else if (mul2uopConverter_original6Selection.Checked)
             {
@@ -191,12 +221,12 @@ namespace MapCreator.userPlugin
                 {
                     string map = String.Format("map{0}", i);
 
-                    PackMUL2UOP(map + ".mul", null, map + "LegacyMUL.uop", MUL2UOP.MapLegacyMUL, i);
-                    PackMUL2UOP(map + "x.mul", null, map + "xLegacyMUL.uop", MUL2UOP.MapLegacyMUL, i);
+                    Pack(map + ".mul", null, map + "LegacyMUL.uop", FileType.MapLegacyMUL, i);
+                    Pack(map + "x.mul", null, map + "xLegacyMUL.uop", FileType.MapLegacyMUL, i);
                 }
 
 
-                statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
+                mul2uopConverter_statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
             }
             else if (mul2uopConverter_custom255Selection.Checked == false || mul2uopConverter_original6Selection.Checked == false)
             {
@@ -205,91 +235,39 @@ namespace MapCreator.userPlugin
             }
         }
 
-
-        ///UOP To MUL
-        private void uop2mulConverter_searchButton01_uopLocation_Click(object sender, EventArgs e)
+        private void mul2uopConverter_convertFacet2MULButton_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog()
+            if (mul2uopConverter_textBox01_facetFileLocation.Text == string.Empty || mul2uopConverter_textBox01_facetFileLocation.Text == null)
             {
-                SelectedPath = this.uop2mulConverter_textBox01_uopLocation.Text
-            };
-            if (folderBrowserDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                this.uop2mulConverter_textBox01_uopLocation.Text = folderBrowserDialog.SelectedPath;
-            }
-        }
-
-        private void uop2mulConverter_textBox01_uopLocation_Load(object sender, EventArgs e)
-        {
-            this.uop2mulConverter_textBox01_uopLocation.Text = Directory.GetCurrentDirectory();
-        }
-
-        private void PackUOP2MUL(string inFile, string outIdx, string outFile, MUL2UOP type, int typeIndex)
-        {
-            try
-            {
-                statusInfoText.Text = inFile;
-                Refresh();
-                inFile = FixPath2(inFile);
-
-                if (!File.Exists(inFile))
-                {
-                    return;
-                }
-
-                outFile = FixPath2(outFile);
-
-                if (File.Exists(outFile))
-                {
-                    return;
-                }
-
-                outIdx = FixPath2(outIdx);
-                ++m_Total;
-
-                conv.FromUOP(inFile, outFile, outIdx, type, typeIndex);
-                ++m_Success;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show($"An error occurred while performing the action.\r\n{e.Message}");
-            }
-        }
-
-        private void uop2mulConverter_convertFacet2MULButton_Click(object sender, EventArgs e)
-        {
-            if (uop2mulConverter_textBox01_uopLocation.Text == string.Empty || uop2mulConverter_textBox01_uopLocation.Text == null)
-            {
-                MessageBox.Show(" ERROR: You Must Specify The Location Path\n Of The [.mul] Files You Want Converted!");
+                MessageBox.Show(" ERROR: You Must Specify The Location Path\n Of The [.uop] Files You Want Converted!");
                 return;
             }
 
-            if (uop2mulConverter_custom255Selection.Checked)
+            if (mul2uopConverter_original6Selection.Checked)
             {
-                for (int i = 0; i <= 255; ++i)
+                for (int i = 0; i <= 250; ++i)
                 {
                     string map = String.Format("map{0}", i);
 
-                    PackUOP2MUL(map + "LegacyMUL.uop", map + ".mul", null, MUL2UOP.MapLegacyMUL, i);
-                    PackUOP2MUL(map + "xLegacyMUL.uop", map + "x.mul", null, MUL2UOP.MapLegacyMUL, i);
+                    Extract(map + "LegacyMUL.uop", map + ".mul", null, FileType.MapLegacyMUL, i);
+                    Extract(map + "xLegacyMUL.uop", map + "x.mul", null, FileType.MapLegacyMUL, i);
                 }
 
-                statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
+                mul2uopConverter_statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
             }
-
-            else if (uop2mulConverter_original6Selection.Checked)
+            else if (mul2uopConverter_custom255Selection.Checked)
             {
                 for (int i = 0; i <= 5; ++i)
                 {
                     string map = String.Format("map{0}", i);
 
-                    PackUOP2MUL(map + "LegacyMUL.uop", map + ".mul", null, MUL2UOP.MapLegacyMUL, i);
-                    PackUOP2MUL(map + "xLegacyMUL.uop", map + "x.mul", null, MUL2UOP.MapLegacyMUL, i);
+                    Extract(map + "LegacyMUL.uop", map + ".mul", null, FileType.MapLegacyMUL, i);
+                    Extract(map + "xLegacyMUL.uop", map + "x.mul", null, FileType.MapLegacyMUL, i);
                 }
 
-                statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
+                mul2uopConverter_statusInfoText.Text = string.Format("Done ({0}/{1} files extracted)", m_Success, m_Total);
             }
-            else if (uop2mulConverter_custom255Selection.Checked == false || uop2mulConverter_original6Selection.Checked == false)
+            else if (mul2uopConverter_custom255Selection.Checked == false || mul2uopConverter_original6Selection.Checked == false)
             {
                 MessageBox.Show("   ERROR: Please Select A Facet Allowance Type Before This Program Can Proceed!\n");
                 return;

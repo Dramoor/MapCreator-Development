@@ -43,216 +43,214 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(communityCredits));
-            this.communityCredits_pictureBox_backDrop = new System.Windows.Forms.PictureBox();
-            this.communityCredits_label_thankDeveloper = new System.Windows.Forms.Label();
-            this.communityCredits_label_thankSubmitter = new System.Windows.Forms.Label();
-            this.communityCredits_pictureBox_mapCreatorLogo = new System.Windows.Forms.PictureBox();
-            this.communityCredits_label_thankDeveloper_textBox = new System.Windows.Forms.TextBox();
-            this.communityCredits_label_thankSubmitter_textBox = new System.Windows.Forms.TextBox();
-            this.communityCredits_pictureBox_dividerBottom = new System.Windows.Forms.PictureBox();
-            this.communityCredits_pictureBox_dividerTop = new System.Windows.Forms.PictureBox();
-            this.communityCredits_label_mapCreator = new System.Windows.Forms.Label();
-            this.communityCredits_label_mapCreatorVersioning = new System.Windows.Forms.Label();
-            this.communityCredits_label_mapCreatorBuildDate = new System.Windows.Forms.Label();
-            this.communityCredits_linkLabel_uoAvocation = new System.Windows.Forms.LinkLabel();
-            this.communityCredits_button_close = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_backDrop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_mapCreatorLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_dividerBottom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_dividerTop)).BeginInit();
-            this.SuspendLayout();
+            communityCredits_pictureBox_backDrop = new PictureBox();
+            communityCredits_label_thankDeveloper = new Label();
+            communityCredits_label_thankSubmitter = new Label();
+            communityCredits_pictureBox_mapCreatorLogo = new PictureBox();
+            communityCredits_label_thankDeveloper_textBox = new TextBox();
+            communityCredits_label_thankSubmitter_textBox = new TextBox();
+            communityCredits_pictureBox_dividerBottom = new PictureBox();
+            communityCredits_pictureBox_dividerTop = new PictureBox();
+            communityCredits_label_mapCreator = new Label();
+            communityCredits_label_mapCreatorVersioning = new Label();
+            communityCredits_label_mapCreatorBuildDate = new Label();
+            communityCredits_linkLabel_uoAvocation = new LinkLabel();
+            communityCredits_button_close = new Button();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_backDrop).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_mapCreatorLogo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_dividerBottom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_dividerTop).BeginInit();
+            SuspendLayout();
             // 
             // communityCredits_pictureBox_backDrop
             // 
-            this.communityCredits_pictureBox_backDrop.Image = ((System.Drawing.Image)(resources.GetObject("communityCredits_pictureBox_backDrop.Image")));
-            this.communityCredits_pictureBox_backDrop.Location = new System.Drawing.Point(0, 0);
-            this.communityCredits_pictureBox_backDrop.Name = "communityCredits_pictureBox_backDrop";
-            this.communityCredits_pictureBox_backDrop.Size = new System.Drawing.Size(246, 360);
-            this.communityCredits_pictureBox_backDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.communityCredits_pictureBox_backDrop.TabIndex = 1;
-            this.communityCredits_pictureBox_backDrop.TabStop = false;
+            communityCredits_pictureBox_backDrop.Image = (Image)resources.GetObject("communityCredits_pictureBox_backDrop.Image");
+            communityCredits_pictureBox_backDrop.Location = new Point(0, 0);
+            communityCredits_pictureBox_backDrop.Name = "communityCredits_pictureBox_backDrop";
+            communityCredits_pictureBox_backDrop.Size = new Size(246, 360);
+            communityCredits_pictureBox_backDrop.SizeMode = PictureBoxSizeMode.StretchImage;
+            communityCredits_pictureBox_backDrop.TabIndex = 1;
+            communityCredits_pictureBox_backDrop.TabStop = false;
             // 
             // communityCredits_label_thankDeveloper
             // 
-            this.communityCredits_label_thankDeveloper.AutoSize = true;
-            this.communityCredits_label_thankDeveloper.BackColor = System.Drawing.Color.Transparent;
-            this.communityCredits_label_thankDeveloper.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_thankDeveloper.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_label_thankDeveloper.Location = new System.Drawing.Point(4, 14);
-            this.communityCredits_label_thankDeveloper.Name = "communityCredits_label_thankDeveloper";
-            this.communityCredits_label_thankDeveloper.Size = new System.Drawing.Size(300, 20);
-            this.communityCredits_label_thankDeveloper.TabIndex = 2;
-            this.communityCredits_label_thankDeveloper.Text = "Thank You To The Developer(s) Who Assited\r\n";
+            communityCredits_label_thankDeveloper.AutoSize = true;
+            communityCredits_label_thankDeveloper.BackColor = Color.Transparent;
+            communityCredits_label_thankDeveloper.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_thankDeveloper.ForeColor = Color.LightSlateGray;
+            communityCredits_label_thankDeveloper.Location = new Point(4, 14);
+            communityCredits_label_thankDeveloper.Name = "communityCredits_label_thankDeveloper";
+            communityCredits_label_thankDeveloper.Size = new Size(300, 20);
+            communityCredits_label_thankDeveloper.TabIndex = 2;
+            communityCredits_label_thankDeveloper.Text = "Thank You To The Developer(s) Who Assited\r\n";
             // 
             // communityCredits_label_thankSubmitter
             // 
-            this.communityCredits_label_thankSubmitter.AutoSize = true;
-            this.communityCredits_label_thankSubmitter.BackColor = System.Drawing.Color.Transparent;
-            this.communityCredits_label_thankSubmitter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_thankSubmitter.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_label_thankSubmitter.Location = new System.Drawing.Point(6, 187);
-            this.communityCredits_label_thankSubmitter.Name = "communityCredits_label_thankSubmitter";
-            this.communityCredits_label_thankSubmitter.Size = new System.Drawing.Size(298, 20);
-            this.communityCredits_label_thankSubmitter.TabIndex = 3;
-            this.communityCredits_label_thankSubmitter.Text = "Thank You To Those Who Submitted Plugins";
+            communityCredits_label_thankSubmitter.AutoSize = true;
+            communityCredits_label_thankSubmitter.BackColor = Color.Transparent;
+            communityCredits_label_thankSubmitter.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_thankSubmitter.ForeColor = Color.LightSlateGray;
+            communityCredits_label_thankSubmitter.Location = new Point(6, 187);
+            communityCredits_label_thankSubmitter.Name = "communityCredits_label_thankSubmitter";
+            communityCredits_label_thankSubmitter.Size = new Size(298, 20);
+            communityCredits_label_thankSubmitter.TabIndex = 3;
+            communityCredits_label_thankSubmitter.Text = "Thank You To Those Who Submitted Plugins";
             // 
             // communityCredits_pictureBox_mapCreatorLogo
             // 
-            this.communityCredits_pictureBox_mapCreatorLogo.Image = ((System.Drawing.Image)(resources.GetObject("communityCredits_pictureBox_mapCreatorLogo.Image")));
-            this.communityCredits_pictureBox_mapCreatorLogo.Location = new System.Drawing.Point(257, 51);
-            this.communityCredits_pictureBox_mapCreatorLogo.Name = "communityCredits_pictureBox_mapCreatorLogo";
-            this.communityCredits_pictureBox_mapCreatorLogo.Size = new System.Drawing.Size(83, 83);
-            this.communityCredits_pictureBox_mapCreatorLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.communityCredits_pictureBox_mapCreatorLogo.TabIndex = 4;
-            this.communityCredits_pictureBox_mapCreatorLogo.TabStop = false;
+            communityCredits_pictureBox_mapCreatorLogo.Image = (Image)resources.GetObject("communityCredits_pictureBox_mapCreatorLogo.Image");
+            communityCredits_pictureBox_mapCreatorLogo.Location = new Point(257, 51);
+            communityCredits_pictureBox_mapCreatorLogo.Name = "communityCredits_pictureBox_mapCreatorLogo";
+            communityCredits_pictureBox_mapCreatorLogo.Size = new Size(83, 83);
+            communityCredits_pictureBox_mapCreatorLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            communityCredits_pictureBox_mapCreatorLogo.TabIndex = 4;
+            communityCredits_pictureBox_mapCreatorLogo.TabStop = false;
             // 
             // communityCredits_label_thankDeveloper_textBox
             // 
-            this.communityCredits_label_thankDeveloper_textBox.BackColor = System.Drawing.Color.LightGray;
-            this.communityCredits_label_thankDeveloper_textBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_thankDeveloper_textBox.ForeColor = System.Drawing.Color.Navy;
-            this.communityCredits_label_thankDeveloper_textBox.Location = new System.Drawing.Point(10, 51);
-            this.communityCredits_label_thankDeveloper_textBox.Multiline = true;
-            this.communityCredits_label_thankDeveloper_textBox.Name = "communityCredits_label_thankDeveloper_textBox";
-            this.communityCredits_label_thankDeveloper_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.communityCredits_label_thankDeveloper_textBox.Size = new System.Drawing.Size(225, 122);
-            this.communityCredits_label_thankDeveloper_textBox.TabIndex = 5;
-            this.communityCredits_label_thankDeveloper_textBox.TabStop = false;
-            this.communityCredits_label_thankDeveloper_textBox.Text = "☺ aasr-sva\r\n--------------\r\n☺ dknight\r\n--------------\r\n☺ Deragon\r\n--------------\r" +
-    "\n☺ KARASHO\'\r\n--------------\r\n☺ Praxiiz\r\n--------------\r\n☺ Punt\r\n--------------\r\n" +
-    "☺ Voxpire";
+            communityCredits_label_thankDeveloper_textBox.BackColor = Color.LightGray;
+            communityCredits_label_thankDeveloper_textBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_thankDeveloper_textBox.ForeColor = Color.Navy;
+            communityCredits_label_thankDeveloper_textBox.Location = new Point(10, 51);
+            communityCredits_label_thankDeveloper_textBox.Multiline = true;
+            communityCredits_label_thankDeveloper_textBox.Name = "communityCredits_label_thankDeveloper_textBox";
+            communityCredits_label_thankDeveloper_textBox.ScrollBars = ScrollBars.Vertical;
+            communityCredits_label_thankDeveloper_textBox.Size = new Size(225, 122);
+            communityCredits_label_thankDeveloper_textBox.TabIndex = 5;
+            communityCredits_label_thankDeveloper_textBox.TabStop = false;
+            communityCredits_label_thankDeveloper_textBox.Text = "☺ aasr-sva\r\n--------------\r\n☺ dknight\r\n--------------\r\n☺ Deragon\r\n--------------\r\n☺ KARASHO'\r\n--------------\r\n☺ Praxiiz\r\n--------------\r\n☺ Punt\r\n--------------\r\n☺ Voxpire";
             // 
             // communityCredits_label_thankSubmitter_textBox
             // 
-            this.communityCredits_label_thankSubmitter_textBox.BackColor = System.Drawing.Color.LightGray;
-            this.communityCredits_label_thankSubmitter_textBox.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_thankSubmitter_textBox.ForeColor = System.Drawing.Color.Navy;
-            this.communityCredits_label_thankSubmitter_textBox.Location = new System.Drawing.Point(10, 223);
-            this.communityCredits_label_thankSubmitter_textBox.Multiline = true;
-            this.communityCredits_label_thankSubmitter_textBox.Name = "communityCredits_label_thankSubmitter_textBox";
-            this.communityCredits_label_thankSubmitter_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.communityCredits_label_thankSubmitter_textBox.Size = new System.Drawing.Size(225, 122);
-            this.communityCredits_label_thankSubmitter_textBox.TabIndex = 6;
-            this.communityCredits_label_thankSubmitter_textBox.TabStop = false;
-            this.communityCredits_label_thankSubmitter_textBox.Text = "☺ deccer\r\n--------------\r\n☺ dknight";
+            communityCredits_label_thankSubmitter_textBox.BackColor = Color.LightGray;
+            communityCredits_label_thankSubmitter_textBox.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_thankSubmitter_textBox.ForeColor = Color.Navy;
+            communityCredits_label_thankSubmitter_textBox.Location = new Point(10, 223);
+            communityCredits_label_thankSubmitter_textBox.Multiline = true;
+            communityCredits_label_thankSubmitter_textBox.Name = "communityCredits_label_thankSubmitter_textBox";
+            communityCredits_label_thankSubmitter_textBox.ScrollBars = ScrollBars.Vertical;
+            communityCredits_label_thankSubmitter_textBox.Size = new Size(225, 122);
+            communityCredits_label_thankSubmitter_textBox.TabIndex = 6;
+            communityCredits_label_thankSubmitter_textBox.TabStop = false;
+            communityCredits_label_thankSubmitter_textBox.Text = "☺ Asylum\r\n--------------\r\n☺ deccer\r\n--------------\r\n☺ dknight";
             // 
             // communityCredits_pictureBox_dividerBottom
             // 
-            this.communityCredits_pictureBox_dividerBottom.Image = ((System.Drawing.Image)(resources.GetObject("communityCredits_pictureBox_dividerBottom.Image")));
-            this.communityCredits_pictureBox_dividerBottom.Location = new System.Drawing.Point(10, 208);
-            this.communityCredits_pictureBox_dividerBottom.Name = "communityCredits_pictureBox_dividerBottom";
-            this.communityCredits_pictureBox_dividerBottom.Size = new System.Drawing.Size(345, 10);
-            this.communityCredits_pictureBox_dividerBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.communityCredits_pictureBox_dividerBottom.TabIndex = 7;
-            this.communityCredits_pictureBox_dividerBottom.TabStop = false;
+            communityCredits_pictureBox_dividerBottom.Image = (Image)resources.GetObject("communityCredits_pictureBox_dividerBottom.Image");
+            communityCredits_pictureBox_dividerBottom.Location = new Point(10, 208);
+            communityCredits_pictureBox_dividerBottom.Name = "communityCredits_pictureBox_dividerBottom";
+            communityCredits_pictureBox_dividerBottom.Size = new Size(345, 10);
+            communityCredits_pictureBox_dividerBottom.SizeMode = PictureBoxSizeMode.StretchImage;
+            communityCredits_pictureBox_dividerBottom.TabIndex = 7;
+            communityCredits_pictureBox_dividerBottom.TabStop = false;
             // 
             // communityCredits_pictureBox_dividerTop
             // 
-            this.communityCredits_pictureBox_dividerTop.Image = ((System.Drawing.Image)(resources.GetObject("communityCredits_pictureBox_dividerTop.Image")));
-            this.communityCredits_pictureBox_dividerTop.Location = new System.Drawing.Point(10, 35);
-            this.communityCredits_pictureBox_dividerTop.Name = "communityCredits_pictureBox_dividerTop";
-            this.communityCredits_pictureBox_dividerTop.Size = new System.Drawing.Size(345, 10);
-            this.communityCredits_pictureBox_dividerTop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.communityCredits_pictureBox_dividerTop.TabIndex = 9;
-            this.communityCredits_pictureBox_dividerTop.TabStop = false;
+            communityCredits_pictureBox_dividerTop.Image = (Image)resources.GetObject("communityCredits_pictureBox_dividerTop.Image");
+            communityCredits_pictureBox_dividerTop.Location = new Point(10, 35);
+            communityCredits_pictureBox_dividerTop.Name = "communityCredits_pictureBox_dividerTop";
+            communityCredits_pictureBox_dividerTop.Size = new Size(345, 10);
+            communityCredits_pictureBox_dividerTop.SizeMode = PictureBoxSizeMode.StretchImage;
+            communityCredits_pictureBox_dividerTop.TabIndex = 9;
+            communityCredits_pictureBox_dividerTop.TabStop = false;
             // 
             // communityCredits_label_mapCreator
             // 
-            this.communityCredits_label_mapCreator.AutoSize = true;
-            this.communityCredits_label_mapCreator.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_mapCreator.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_label_mapCreator.Location = new System.Drawing.Point(256, 290);
-            this.communityCredits_label_mapCreator.Name = "communityCredits_label_mapCreator";
-            this.communityCredits_label_mapCreator.Size = new System.Drawing.Size(88, 20);
-            this.communityCredits_label_mapCreator.TabIndex = 10;
-            this.communityCredits_label_mapCreator.Text = "MapCreator";
+            communityCredits_label_mapCreator.AutoSize = true;
+            communityCredits_label_mapCreator.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_mapCreator.ForeColor = Color.LightSlateGray;
+            communityCredits_label_mapCreator.Location = new Point(256, 290);
+            communityCredits_label_mapCreator.Name = "communityCredits_label_mapCreator";
+            communityCredits_label_mapCreator.Size = new Size(88, 20);
+            communityCredits_label_mapCreator.TabIndex = 10;
+            communityCredits_label_mapCreator.Text = "MapCreator";
             // 
             // communityCredits_label_mapCreatorVersioning
             // 
-            this.communityCredits_label_mapCreatorVersioning.AutoSize = true;
-            this.communityCredits_label_mapCreatorVersioning.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_mapCreatorVersioning.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_label_mapCreatorVersioning.Location = new System.Drawing.Point(266, 310);
-            this.communityCredits_label_mapCreatorVersioning.Name = "communityCredits_label_mapCreatorVersioning";
-            this.communityCredits_label_mapCreatorVersioning.Size = new System.Drawing.Size(72, 17);
-            this.communityCredits_label_mapCreatorVersioning.TabIndex = 11;
-            this.communityCredits_label_mapCreatorVersioning.Text = "Version 3.0";
+            communityCredits_label_mapCreatorVersioning.AutoSize = true;
+            communityCredits_label_mapCreatorVersioning.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_mapCreatorVersioning.ForeColor = Color.LightSlateGray;
+            communityCredits_label_mapCreatorVersioning.Location = new Point(266, 310);
+            communityCredits_label_mapCreatorVersioning.Name = "communityCredits_label_mapCreatorVersioning";
+            communityCredits_label_mapCreatorVersioning.Size = new Size(72, 17);
+            communityCredits_label_mapCreatorVersioning.TabIndex = 11;
+            communityCredits_label_mapCreatorVersioning.Text = "Version 3.5";
             // 
             // communityCredits_label_mapCreatorBuildDate
             // 
-            this.communityCredits_label_mapCreatorBuildDate.AutoSize = true;
-            this.communityCredits_label_mapCreatorBuildDate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_label_mapCreatorBuildDate.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_label_mapCreatorBuildDate.Location = new System.Drawing.Point(248, 328);
-            this.communityCredits_label_mapCreatorBuildDate.Name = "communityCredits_label_mapCreatorBuildDate";
-            this.communityCredits_label_mapCreatorBuildDate.Size = new System.Drawing.Size(106, 17);
-            this.communityCredits_label_mapCreatorBuildDate.TabIndex = 12;
-            this.communityCredits_label_mapCreatorBuildDate.Text = "Build: 12082022a";
+            communityCredits_label_mapCreatorBuildDate.AutoSize = true;
+            communityCredits_label_mapCreatorBuildDate.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_label_mapCreatorBuildDate.ForeColor = Color.LightSlateGray;
+            communityCredits_label_mapCreatorBuildDate.Location = new Point(248, 328);
+            communityCredits_label_mapCreatorBuildDate.Name = "communityCredits_label_mapCreatorBuildDate";
+            communityCredits_label_mapCreatorBuildDate.Size = new Size(106, 17);
+            communityCredits_label_mapCreatorBuildDate.TabIndex = 12;
+            communityCredits_label_mapCreatorBuildDate.Text = "Build: 08132023a";
             // 
             // communityCredits_linkLabel_uoAvocation
             // 
-            this.communityCredits_linkLabel_uoAvocation.AutoSize = true;
-            this.communityCredits_linkLabel_uoAvocation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_linkLabel_uoAvocation.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.communityCredits_linkLabel_uoAvocation.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.communityCredits_linkLabel_uoAvocation.Location = new System.Drawing.Point(257, 127);
-            this.communityCredits_linkLabel_uoAvocation.Name = "communityCredits_linkLabel_uoAvocation";
-            this.communityCredits_linkLabel_uoAvocation.Size = new System.Drawing.Size(86, 19);
-            this.communityCredits_linkLabel_uoAvocation.TabIndex = 13;
-            this.communityCredits_linkLabel_uoAvocation.TabStop = true;
-            this.communityCredits_linkLabel_uoAvocation.Text = "uoAvocation";
-            this.communityCredits_linkLabel_uoAvocation.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.communityCredits_linkLabel_uoAvocation_LinkClicked);
+            communityCredits_linkLabel_uoAvocation.AutoSize = true;
+            communityCredits_linkLabel_uoAvocation.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_linkLabel_uoAvocation.ForeColor = Color.LightSlateGray;
+            communityCredits_linkLabel_uoAvocation.LinkColor = Color.FromArgb(192, 192, 255);
+            communityCredits_linkLabel_uoAvocation.Location = new Point(257, 127);
+            communityCredits_linkLabel_uoAvocation.Name = "communityCredits_linkLabel_uoAvocation";
+            communityCredits_linkLabel_uoAvocation.Size = new Size(86, 19);
+            communityCredits_linkLabel_uoAvocation.TabIndex = 13;
+            communityCredits_linkLabel_uoAvocation.TabStop = true;
+            communityCredits_linkLabel_uoAvocation.Text = "uoAvocation";
+            communityCredits_linkLabel_uoAvocation.LinkClicked += communityCredits_linkLabel_uoAvocation_LinkClicked;
             // 
             // communityCredits_button_close
             // 
-            this.communityCredits_button_close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("communityCredits_button_close.BackgroundImage")));
-            this.communityCredits_button_close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.communityCredits_button_close.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.communityCredits_button_close.ForeColor = System.Drawing.Color.SlateGray;
-            this.communityCredits_button_close.Location = new System.Drawing.Point(249, 240);
-            this.communityCredits_button_close.Name = "communityCredits_button_close";
-            this.communityCredits_button_close.Size = new System.Drawing.Size(101, 36);
-            this.communityCredits_button_close.TabIndex = 14;
-            this.communityCredits_button_close.Text = "Close";
-            this.communityCredits_button_close.UseVisualStyleBackColor = true;
-            this.communityCredits_button_close.Click += new System.EventHandler(this.communityCredits_button_close_Click);
-            this.communityCredits_button_close.MouseEnter += new System.EventHandler(this.communityCredits_button_close_MouseEnter);
-            this.communityCredits_button_close.MouseLeave += new System.EventHandler(this.communityCredits_button_close_MouseLeave);
+            communityCredits_button_close.BackgroundImage = (Image)resources.GetObject("communityCredits_button_close.BackgroundImage");
+            communityCredits_button_close.BackgroundImageLayout = ImageLayout.Stretch;
+            communityCredits_button_close.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            communityCredits_button_close.ForeColor = Color.SlateGray;
+            communityCredits_button_close.Location = new Point(249, 240);
+            communityCredits_button_close.Name = "communityCredits_button_close";
+            communityCredits_button_close.Size = new Size(101, 36);
+            communityCredits_button_close.TabIndex = 14;
+            communityCredits_button_close.Text = "Close";
+            communityCredits_button_close.UseVisualStyleBackColor = true;
+            communityCredits_button_close.Click += communityCredits_button_close_Click;
+            communityCredits_button_close.MouseEnter += communityCredits_button_close_MouseEnter;
+            communityCredits_button_close.MouseLeave += communityCredits_button_close_MouseLeave;
             // 
             // communityCredits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(361, 358);
-            this.Controls.Add(this.communityCredits_button_close);
-            this.Controls.Add(this.communityCredits_linkLabel_uoAvocation);
-            this.Controls.Add(this.communityCredits_label_mapCreatorBuildDate);
-            this.Controls.Add(this.communityCredits_label_mapCreatorVersioning);
-            this.Controls.Add(this.communityCredits_label_mapCreator);
-            this.Controls.Add(this.communityCredits_pictureBox_dividerTop);
-            this.Controls.Add(this.communityCredits_pictureBox_dividerBottom);
-            this.Controls.Add(this.communityCredits_label_thankSubmitter_textBox);
-            this.Controls.Add(this.communityCredits_label_thankDeveloper_textBox);
-            this.Controls.Add(this.communityCredits_pictureBox_mapCreatorLogo);
-            this.Controls.Add(this.communityCredits_label_thankSubmitter);
-            this.Controls.Add(this.communityCredits_label_thankDeveloper);
-            this.Controls.Add(this.communityCredits_pictureBox_backDrop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "communityCredits";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MapCreator: Credits";
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_backDrop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_mapCreatorLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_dividerBottom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.communityCredits_pictureBox_dividerTop)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
+            ClientSize = new Size(361, 358);
+            Controls.Add(communityCredits_button_close);
+            Controls.Add(communityCredits_linkLabel_uoAvocation);
+            Controls.Add(communityCredits_label_mapCreatorBuildDate);
+            Controls.Add(communityCredits_label_mapCreatorVersioning);
+            Controls.Add(communityCredits_label_mapCreator);
+            Controls.Add(communityCredits_pictureBox_dividerTop);
+            Controls.Add(communityCredits_pictureBox_dividerBottom);
+            Controls.Add(communityCredits_label_thankSubmitter_textBox);
+            Controls.Add(communityCredits_label_thankDeveloper_textBox);
+            Controls.Add(communityCredits_pictureBox_mapCreatorLogo);
+            Controls.Add(communityCredits_label_thankSubmitter);
+            Controls.Add(communityCredits_label_thankDeveloper);
+            Controls.Add(communityCredits_pictureBox_backDrop);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "communityCredits";
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MapCreator: Credits";
+            TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_backDrop).EndInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_mapCreatorLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_dividerBottom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)communityCredits_pictureBox_dividerTop).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

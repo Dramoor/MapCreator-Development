@@ -35,10 +35,14 @@
             userPlugins_pictureBox_topDivider = new PictureBox();
             userPlugins_pictureBox_bottomDivider = new PictureBox();
             statusStrip1 = new StatusStrip();
-            statusInfoText = new ToolStripStatusLabel();
+            mul2uopConverter_statusInfoText = new ToolStripStatusLabel();
             userPlugins_statusStrip_label_mapCreatorBuildDate = new Label();
-            TabControl = new TabControl();
+            uop2mulConverter_custom255Selection = new TabControl();
             tabPage1 = new TabPage();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            label1 = new Label();
+            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             mul2bmpConverter = new TabPage();
             mul2bmpConverter_convertFacet2BitmapButton = new Button();
@@ -53,34 +57,28 @@
             mul2bmpConverter_label02_radarcolFileLocation = new Label();
             mul2bmpConverter_label01_compiledFacetLocation = new Label();
             mul2uopConverter = new TabPage();
+            mul2uopConverter_convertFacet2MULButton = new Button();
             mul2uopConverter_radarcolWarningLabel = new Label();
             mul2uopConverter_convertFacet2UOPButton = new Button();
             mul2uopConverter_custom255Selection = new RadioButton();
             mul2uopConverter_original6Selection = new RadioButton();
             mul2uopConverter_label02_serverTypeFacetNumber = new Label();
             mul2uopConverter_searchButton01_mulLocation = new Button();
-            mul2uopConverter_textBox01_mulLocation = new TextBox();
-            mul2uopConverter_label01_mulLocation = new Label();
-            uop2mulConverter = new TabPage();
-            uop2mulConverter_radarcolWarningLabel = new Label();
-            uop2mulConverter_convertFacet2MULButton = new Button();
-            uop2mulConverter_custom255Selection = new RadioButton();
-            uop2mulConverter_original6Selection = new RadioButton();
-            uop2mulConverter_label02_serverTypeFacetNumber = new Label();
-            uop2mulConverter_searchButton01_uopLocation = new Button();
-            uop2mulConverter_textBox01_uopLocation = new TextBox();
-            uop2mulConverter_label01_uopLocation = new Label();
+            mul2uopConverter_textBox01_facetFileLocation = new TextBox();
+            mul2uopConverter_label01_facetFileLocation = new Label();
             userPlugins_statusStrip_label_mapCreatorVersioning = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)userPlugins_pictureBox_topDivider).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userPlugins_pictureBox_bottomDivider).BeginInit();
             statusStrip1.SuspendLayout();
-            TabControl.SuspendLayout();
+            uop2mulConverter_custom255Selection.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             mul2bmpConverter.SuspendLayout();
             mul2uopConverter.SuspendLayout();
-            uop2mulConverter.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -135,21 +133,21 @@
             // 
             // statusStrip1
             // 
-            statusStrip1.Items.AddRange(new ToolStripItem[] { statusInfoText });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { mul2uopConverter_statusInfoText });
             statusStrip1.Location = new Point(0, 422);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(773, 22);
             statusStrip1.TabIndex = 9;
             statusStrip1.Text = "statusStrip1";
             // 
-            // statusInfoText
+            // mul2uopConverter_statusInfoText
             // 
-            statusInfoText.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            statusInfoText.ForeColor = Color.Gray;
-            statusInfoText.Margin = new Padding(450, 3, 0, 2);
-            statusInfoText.Name = "statusInfoText";
-            statusInfoText.Size = new Size(88, 17);
-            statusInfoText.Text = "StatusInfoText";
+            mul2uopConverter_statusInfoText.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            mul2uopConverter_statusInfoText.ForeColor = Color.Gray;
+            mul2uopConverter_statusInfoText.Margin = new Padding(450, 3, 0, 2);
+            mul2uopConverter_statusInfoText.Name = "mul2uopConverter_statusInfoText";
+            mul2uopConverter_statusInfoText.Size = new Size(43, 17);
+            mul2uopConverter_statusInfoText.Text = "Status";
             // 
             // userPlugins_statusStrip_label_mapCreatorBuildDate
             // 
@@ -162,22 +160,25 @@
             userPlugins_statusStrip_label_mapCreatorBuildDate.Name = "userPlugins_statusStrip_label_mapCreatorBuildDate";
             userPlugins_statusStrip_label_mapCreatorBuildDate.Size = new Size(117, 19);
             userPlugins_statusStrip_label_mapCreatorBuildDate.TabIndex = 14;
-            userPlugins_statusStrip_label_mapCreatorBuildDate.Text = "Build: 11262022a";
+            userPlugins_statusStrip_label_mapCreatorBuildDate.Text = "Build: 08132023a";
             // 
-            // TabControl
+            // uop2mulConverter_custom255Selection
             // 
-            TabControl.Controls.Add(tabPage1);
-            TabControl.Controls.Add(mul2bmpConverter);
-            TabControl.Controls.Add(mul2uopConverter);
-            TabControl.Controls.Add(uop2mulConverter);
-            TabControl.Location = new Point(0, 42);
-            TabControl.Name = "TabControl";
-            TabControl.SelectedIndex = 0;
-            TabControl.Size = new Size(770, 368);
-            TabControl.TabIndex = 15;
+            uop2mulConverter_custom255Selection.Controls.Add(tabPage1);
+            uop2mulConverter_custom255Selection.Controls.Add(mul2bmpConverter);
+            uop2mulConverter_custom255Selection.Controls.Add(mul2uopConverter);
+            uop2mulConverter_custom255Selection.Location = new Point(0, 42);
+            uop2mulConverter_custom255Selection.Name = "uop2mulConverter_custom255Selection";
+            uop2mulConverter_custom255Selection.SelectedIndex = 0;
+            uop2mulConverter_custom255Selection.Size = new Size(770, 368);
+            uop2mulConverter_custom255Selection.TabIndex = 15;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(pictureBox4);
+            tabPage1.Controls.Add(pictureBox3);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(pictureBox2);
             tabPage1.Controls.Add(pictureBox1);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
@@ -186,6 +187,48 @@
             tabPage1.TabIndex = 0;
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(43, 178);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(530, 5);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(43, 131);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(530, 5);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlDarkDark;
+            label1.Location = new Point(45, 140);
+            label1.Name = "label1";
+            label1.Size = new Size(457, 28);
+            label1.TabIndex = 2;
+            label1.Text = "Developer(s): Asylum (POL - Code From UOFiddler)";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(35, 59);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(446, 76);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
@@ -193,7 +236,7 @@
             pictureBox1.Location = new Point(3, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(756, 334);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -315,21 +358,33 @@
             // 
             // mul2uopConverter
             // 
+            mul2uopConverter.Controls.Add(mul2uopConverter_convertFacet2MULButton);
             mul2uopConverter.Controls.Add(mul2uopConverter_radarcolWarningLabel);
             mul2uopConverter.Controls.Add(mul2uopConverter_convertFacet2UOPButton);
             mul2uopConverter.Controls.Add(mul2uopConverter_custom255Selection);
             mul2uopConverter.Controls.Add(mul2uopConverter_original6Selection);
             mul2uopConverter.Controls.Add(mul2uopConverter_label02_serverTypeFacetNumber);
             mul2uopConverter.Controls.Add(mul2uopConverter_searchButton01_mulLocation);
-            mul2uopConverter.Controls.Add(mul2uopConverter_textBox01_mulLocation);
-            mul2uopConverter.Controls.Add(mul2uopConverter_label01_mulLocation);
+            mul2uopConverter.Controls.Add(mul2uopConverter_textBox01_facetFileLocation);
+            mul2uopConverter.Controls.Add(mul2uopConverter_label01_facetFileLocation);
             mul2uopConverter.Location = new Point(4, 24);
             mul2uopConverter.Name = "mul2uopConverter";
             mul2uopConverter.Padding = new Padding(3);
             mul2uopConverter.Size = new Size(762, 340);
             mul2uopConverter.TabIndex = 2;
-            mul2uopConverter.Text = ".mul → .uop";
+            mul2uopConverter.Text = ".mul ↔ .uop";
             mul2uopConverter.UseVisualStyleBackColor = true;
+            // 
+            // mul2uopConverter_convertFacet2MULButton
+            // 
+            mul2uopConverter_convertFacet2MULButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            mul2uopConverter_convertFacet2MULButton.Location = new Point(22, 256);
+            mul2uopConverter_convertFacet2MULButton.Name = "mul2uopConverter_convertFacet2MULButton";
+            mul2uopConverter_convertFacet2MULButton.Size = new Size(718, 60);
+            mul2uopConverter_convertFacet2MULButton.TabIndex = 8;
+            mul2uopConverter_convertFacet2MULButton.Text = "Convert Facet (.uop) Files To (.mul) Files";
+            mul2uopConverter_convertFacet2MULButton.UseVisualStyleBackColor = true;
+            mul2uopConverter_convertFacet2MULButton.Click += mul2uopConverter_convertFacet2MULButton_Click;
             // 
             // mul2uopConverter_radarcolWarningLabel
             // 
@@ -345,7 +400,7 @@
             mul2uopConverter_convertFacet2UOPButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             mul2uopConverter_convertFacet2UOPButton.Location = new Point(22, 187);
             mul2uopConverter_convertFacet2UOPButton.Name = "mul2uopConverter_convertFacet2UOPButton";
-            mul2uopConverter_convertFacet2UOPButton.Size = new Size(718, 129);
+            mul2uopConverter_convertFacet2UOPButton.Size = new Size(718, 60);
             mul2uopConverter_convertFacet2UOPButton.TabIndex = 6;
             mul2uopConverter_convertFacet2UOPButton.Text = "Convert Facet (.mul) Files To (.uop) Files";
             mul2uopConverter_convertFacet2UOPButton.UseVisualStyleBackColor = true;
@@ -393,117 +448,21 @@
             mul2uopConverter_searchButton01_mulLocation.UseVisualStyleBackColor = true;
             mul2uopConverter_searchButton01_mulLocation.Click += mul2uopConverter_searchButton01_mulLocation_Click;
             // 
-            // mul2uopConverter_textBox01_mulLocation
+            // mul2uopConverter_textBox01_facetFileLocation
             // 
-            mul2uopConverter_textBox01_mulLocation.Location = new Point(22, 56);
-            mul2uopConverter_textBox01_mulLocation.Name = "mul2uopConverter_textBox01_mulLocation";
-            mul2uopConverter_textBox01_mulLocation.Size = new Size(366, 23);
-            mul2uopConverter_textBox01_mulLocation.TabIndex = 1;
+            mul2uopConverter_textBox01_facetFileLocation.Location = new Point(22, 56);
+            mul2uopConverter_textBox01_facetFileLocation.Name = "mul2uopConverter_textBox01_facetFileLocation";
+            mul2uopConverter_textBox01_facetFileLocation.Size = new Size(366, 23);
+            mul2uopConverter_textBox01_facetFileLocation.TabIndex = 1;
             // 
-            // mul2uopConverter_label01_mulLocation
+            // mul2uopConverter_label01_facetFileLocation
             // 
-            mul2uopConverter_label01_mulLocation.AutoSize = true;
-            mul2uopConverter_label01_mulLocation.Location = new Point(22, 38);
-            mul2uopConverter_label01_mulLocation.Name = "mul2uopConverter_label01_mulLocation";
-            mul2uopConverter_label01_mulLocation.Size = new Size(143, 15);
-            mul2uopConverter_label01_mulLocation.TabIndex = 0;
-            mul2uopConverter_label01_mulLocation.Text = "Select (.mul) File Location";
-            // 
-            // uop2mulConverter
-            // 
-            uop2mulConverter.Controls.Add(uop2mulConverter_radarcolWarningLabel);
-            uop2mulConverter.Controls.Add(uop2mulConverter_convertFacet2MULButton);
-            uop2mulConverter.Controls.Add(uop2mulConverter_custom255Selection);
-            uop2mulConverter.Controls.Add(uop2mulConverter_original6Selection);
-            uop2mulConverter.Controls.Add(uop2mulConverter_label02_serverTypeFacetNumber);
-            uop2mulConverter.Controls.Add(uop2mulConverter_searchButton01_uopLocation);
-            uop2mulConverter.Controls.Add(uop2mulConverter_textBox01_uopLocation);
-            uop2mulConverter.Controls.Add(uop2mulConverter_label01_uopLocation);
-            uop2mulConverter.Location = new Point(4, 24);
-            uop2mulConverter.Name = "uop2mulConverter";
-            uop2mulConverter.Padding = new Padding(3);
-            uop2mulConverter.Size = new Size(762, 340);
-            uop2mulConverter.TabIndex = 3;
-            uop2mulConverter.Text = ".uop → .mul";
-            uop2mulConverter.UseVisualStyleBackColor = true;
-            // 
-            // uop2mulConverter_radarcolWarningLabel
-            // 
-            uop2mulConverter_radarcolWarningLabel.AutoSize = true;
-            uop2mulConverter_radarcolWarningLabel.Location = new Point(25, 86);
-            uop2mulConverter_radarcolWarningLabel.Name = "uop2mulConverter_radarcolWarningLabel";
-            uop2mulConverter_radarcolWarningLabel.Size = new Size(363, 30);
-            uop2mulConverter_radarcolWarningLabel.TabIndex = 15;
-            uop2mulConverter_radarcolWarningLabel.Text = "\"Radarcol.mul\" is required to be in the same folder as the converted\r\n.mul files if you wish to view them in UOFiddler";
-            // 
-            // uop2mulConverter_convertFacet2MULButton
-            // 
-            uop2mulConverter_convertFacet2MULButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            uop2mulConverter_convertFacet2MULButton.Location = new Point(22, 187);
-            uop2mulConverter_convertFacet2MULButton.Name = "uop2mulConverter_convertFacet2MULButton";
-            uop2mulConverter_convertFacet2MULButton.Size = new Size(718, 129);
-            uop2mulConverter_convertFacet2MULButton.TabIndex = 14;
-            uop2mulConverter_convertFacet2MULButton.Text = "Convert Facet (.mul) Files To (.uop) Files";
-            uop2mulConverter_convertFacet2MULButton.UseVisualStyleBackColor = true;
-            uop2mulConverter_convertFacet2MULButton.Click += uop2mulConverter_convertFacet2MULButton_Click;
-            // 
-            // uop2mulConverter_custom255Selection
-            // 
-            uop2mulConverter_custom255Selection.AutoSize = true;
-            uop2mulConverter_custom255Selection.Location = new Point(527, 97);
-            uop2mulConverter_custom255Selection.Name = "uop2mulConverter_custom255Selection";
-            uop2mulConverter_custom255Selection.Size = new Size(213, 19);
-            uop2mulConverter_custom255Selection.TabIndex = 13;
-            uop2mulConverter_custom255Selection.TabStop = true;
-            uop2mulConverter_custom255Selection.Text = "Custom Facets (Convert ≥7 Worlds)";
-            uop2mulConverter_custom255Selection.UseVisualStyleBackColor = true;
-            // 
-            // uop2mulConverter_original6Selection
-            // 
-            uop2mulConverter_original6Selection.AutoSize = true;
-            uop2mulConverter_original6Selection.Location = new Point(527, 69);
-            uop2mulConverter_original6Selection.Name = "uop2mulConverter_original6Selection";
-            uop2mulConverter_original6Selection.Size = new Size(213, 19);
-            uop2mulConverter_original6Selection.TabIndex = 12;
-            uop2mulConverter_original6Selection.TabStop = true;
-            uop2mulConverter_original6Selection.Text = "Original Facets (Convert ≤6 Worlds)";
-            uop2mulConverter_original6Selection.UseVisualStyleBackColor = true;
-            // 
-            // uop2mulConverter_label02_serverTypeFacetNumber
-            // 
-            uop2mulConverter_label02_serverTypeFacetNumber.AutoSize = true;
-            uop2mulConverter_label02_serverTypeFacetNumber.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            uop2mulConverter_label02_serverTypeFacetNumber.Location = new Point(527, 38);
-            uop2mulConverter_label02_serverTypeFacetNumber.Name = "uop2mulConverter_label02_serverTypeFacetNumber";
-            uop2mulConverter_label02_serverTypeFacetNumber.Size = new Size(144, 15);
-            uop2mulConverter_label02_serverTypeFacetNumber.TabIndex = 11;
-            uop2mulConverter_label02_serverTypeFacetNumber.Text = "Server Type Facet Number";
-            // 
-            // uop2mulConverter_searchButton01_uopLocation
-            // 
-            uop2mulConverter_searchButton01_uopLocation.Location = new Point(411, 55);
-            uop2mulConverter_searchButton01_uopLocation.Name = "uop2mulConverter_searchButton01_uopLocation";
-            uop2mulConverter_searchButton01_uopLocation.Size = new Size(75, 23);
-            uop2mulConverter_searchButton01_uopLocation.TabIndex = 10;
-            uop2mulConverter_searchButton01_uopLocation.Text = "Search";
-            uop2mulConverter_searchButton01_uopLocation.UseVisualStyleBackColor = true;
-            uop2mulConverter_searchButton01_uopLocation.Click += uop2mulConverter_searchButton01_uopLocation_Click;
-            // 
-            // uop2mulConverter_textBox01_uopLocation
-            // 
-            uop2mulConverter_textBox01_uopLocation.Location = new Point(22, 56);
-            uop2mulConverter_textBox01_uopLocation.Name = "uop2mulConverter_textBox01_uopLocation";
-            uop2mulConverter_textBox01_uopLocation.Size = new Size(366, 23);
-            uop2mulConverter_textBox01_uopLocation.TabIndex = 9;
-            // 
-            // uop2mulConverter_label01_uopLocation
-            // 
-            uop2mulConverter_label01_uopLocation.AutoSize = true;
-            uop2mulConverter_label01_uopLocation.Location = new Point(22, 38);
-            uop2mulConverter_label01_uopLocation.Name = "uop2mulConverter_label01_uopLocation";
-            uop2mulConverter_label01_uopLocation.Size = new Size(143, 15);
-            uop2mulConverter_label01_uopLocation.TabIndex = 8;
-            uop2mulConverter_label01_uopLocation.Text = "Select (.mul) File Location";
+            mul2uopConverter_label01_facetFileLocation.AutoSize = true;
+            mul2uopConverter_label01_facetFileLocation.Location = new Point(22, 38);
+            mul2uopConverter_label01_facetFileLocation.Name = "mul2uopConverter_label01_facetFileLocation";
+            mul2uopConverter_label01_facetFileLocation.Size = new Size(139, 15);
+            mul2uopConverter_label01_facetFileLocation.TabIndex = 0;
+            mul2uopConverter_label01_facetFileLocation.Text = "Select Facet File Location";
             // 
             // userPlugins_statusStrip_label_mapCreatorVersioning
             // 
@@ -516,14 +475,14 @@
             userPlugins_statusStrip_label_mapCreatorVersioning.Name = "userPlugins_statusStrip_label_mapCreatorVersioning";
             userPlugins_statusStrip_label_mapCreatorVersioning.Size = new Size(158, 19);
             userPlugins_statusStrip_label_mapCreatorVersioning.TabIndex = 13;
-            userPlugins_statusStrip_label_mapCreatorVersioning.Text = "MapCreator: Version 3.0";
+            userPlugins_statusStrip_label_mapCreatorVersioning.Text = "MapCreator: Version 3.5";
             // 
             // fileTypeConverters
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(773, 444);
-            Controls.Add(TabControl);
+            Controls.Add(uop2mulConverter_custom255Selection);
             Controls.Add(userPlugins_statusStrip_label_mapCreatorBuildDate);
             Controls.Add(userPlugins_statusStrip_label_mapCreatorVersioning);
             Controls.Add(statusStrip1);
@@ -537,21 +496,24 @@
             Name = "fileTypeConverters";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MapCreator: File Type Converters";
+            TopMost = true;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)userPlugins_pictureBox_topDivider).EndInit();
             ((System.ComponentModel.ISupportInitialize)userPlugins_pictureBox_bottomDivider).EndInit();
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            TabControl.ResumeLayout(false);
+            uop2mulConverter_custom255Selection.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             mul2bmpConverter.ResumeLayout(false);
             mul2bmpConverter.PerformLayout();
             mul2uopConverter.ResumeLayout(false);
             mul2uopConverter.PerformLayout();
-            uop2mulConverter.ResumeLayout(false);
-            uop2mulConverter.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -565,7 +527,7 @@
         private PictureBox userPlugins_pictureBox_bottomDivider;
         private StatusStrip statusStrip1;
         private Label userPlugins_statusStrip_label_mapCreatorBuildDate;
-        private TabControl TabControl;
+        private TabControl uop2mulConverter_custom255Selection;
         private TabPage tabPage1;
         private TabPage mul2bmpConverter;
         private TabPage mul2uopConverter;
@@ -581,24 +543,20 @@
         private TextBox mul2bmpConverter_textBox01_compiledFacetLocation;
         private Label mul2bmpConverter_label02_radarcolFileLocation;
         private Label mul2bmpConverter_label01_compiledFacetLocation;
-        private Label mul2uopConverter_label01_mulLocation;
+        private Label mul2uopConverter_label01_facetFileLocation;
         private Button mul2uopConverter_searchButton01_mulLocation;
-        private TextBox mul2uopConverter_textBox01_mulLocation;
+        private TextBox mul2uopConverter_textBox01_facetFileLocation;
         private RadioButton mul2uopConverter_custom255Selection;
         private RadioButton mul2uopConverter_original6Selection;
         private Label mul2uopConverter_label02_serverTypeFacetNumber;
         private Button mul2uopConverter_convertFacet2UOPButton;
-        private ToolStripStatusLabel statusInfoText;
+        private ToolStripStatusLabel mul2uopConverter_statusInfoText;
         private Label userPlugins_statusStrip_label_mapCreatorVersioning;
         private Label mul2uopConverter_radarcolWarningLabel;
-        private TabPage uop2mulConverter;
-        private Label uop2mulConverter_radarcolWarningLabel;
-        private Button uop2mulConverter_convertFacet2MULButton;
-        private RadioButton uop2mulConverter_custom255Selection;
-        private RadioButton uop2mulConverter_original6Selection;
-        private Label uop2mulConverter_label02_serverTypeFacetNumber;
-        private Button uop2mulConverter_searchButton01_uopLocation;
-        private TextBox uop2mulConverter_textBox01_uopLocation;
-        private Label uop2mulConverter_label01_uopLocation;
+        private Button mul2uopConverter_convertFacet2MULButton;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private Label label1;
+        private PictureBox pictureBox4;
     }
 }

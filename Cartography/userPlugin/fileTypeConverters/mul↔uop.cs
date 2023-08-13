@@ -31,7 +31,7 @@ using UltimaSDK;
 
 namespace FileTypeConverter
 {
-    public enum MUL2UOP
+    public enum FileType
     { 
         ArtLegacyMUL,
         GumpartLegacyMUL,
@@ -86,7 +86,7 @@ namespace FileTypeConverter
         //
         // MUL -> UOP
         //
-        public void ToUOP(string inFile, string inFileIdx, string outFile, MUL2UOP type, int typeIndex)
+        public void ToUOP(string inFile, string inFileIdx, string outFile, FileType type, int typeIndex)
         {
             // Same for all UOP files
             long firstTable = 0x200;
@@ -102,7 +102,7 @@ namespace FileTypeConverter
             {
                 List<IdxEntry> idxEntries;
 
-                if (type == MUL2UOP.MapLegacyMUL)
+                if (type == FileType.MapLegacyMUL)
                 {
                     // No IDX file, just group the data into 0xC4000 long chunks
                     int length = (int)reader.BaseStream.Length;
@@ -195,7 +195,7 @@ namespace FileTypeConverter
                         tableEntries[tableIdx].m_Identifier = HashLittle2(String.Format(hashFormat, idxEntries[j].m_Id));
                         tableEntries[tableIdx].m_Hash = HashAdler32(data);
 
-                        if (type == MUL2UOP.GumpartLegacyMUL)
+                        if (type == FileType.GumpartLegacyMUL)
                         {
                             // Prepend width/height from IDX's extra
                             int width = (idxEntries[j].m_Extra >> 16) & 0xFFFF;
@@ -252,7 +252,7 @@ namespace FileTypeConverter
         // 
         // UOP -> MUL
         //
-        public void FromUOP(string inFile, string outFile, string outFileIdx, MUL2UOP type, int typeIndex)
+        public void FromUOP(string inFile, string outFile, string outFileIdx, FileType type, int typeIndex)
         {
             Dictionary<ulong, int> chunkIds = new Dictionary<ulong, int>();
 
@@ -316,7 +316,7 @@ namespace FileTypeConverter
                         stream.Seek(offsets[i].m_Offset + offsets[i].m_HeaderLength, SeekOrigin.Begin);
                         byte[] chunkData = reader.ReadBytes(offsets[i].m_Size);
 
-                        if (type == MUL2UOP.MapLegacyMUL)
+                        if (type == FileType.MapLegacyMUL)
                         {
                             // Write this chunk on the right position (no IDX file to point to it)
                             writer.Seek(chunkID * 0xC4000, SeekOrigin.Begin);
@@ -332,7 +332,7 @@ namespace FileTypeConverter
 
                             switch (type)
                             {
-                                case MUL2UOP.GumpartLegacyMUL:
+                                case FileType.GumpartLegacyMUL:
                                     {
                                         // Width and height are prepended to the data
                                         int width = (chunkData[0] | (chunkData[1] << 8) | (chunkData[2] << 16) | (chunkData[3] << 24));
@@ -343,7 +343,7 @@ namespace FileTypeConverter
                                         dataOffset = 8;
                                         break;
                                     }
-                                case MUL2UOP.SoundLegacyMUL:
+                                case FileType.SoundLegacyMUL:
                                     {
                                         // Extra contains the ID of this sound file + 1
                                         writerIdx.Write(offsets[i].m_Size);
@@ -391,7 +391,7 @@ namespace FileTypeConverter
         //
         // Hash filename formats (remember: lower case!)
         //
-        public static string GetHashFormat(MUL2UOP type, int typeIndex, out int maxId)
+        public static string GetHashFormat(FileType type, int typeIndex, out int maxId)
         {
             /*
              * MaxID is only used for constructing a lookup table.
@@ -401,22 +401,22 @@ namespace FileTypeConverter
 
             switch (type)
             {
-                case MUL2UOP.ArtLegacyMUL:
+                case FileType.ArtLegacyMUL:
                     {
                         maxId = 0x13FDC; // UOFiddler requires this exact index length to recognize UOHS art files
                         return "build/artlegacymul/{0:00000000}.tga";
                     }
-                case MUL2UOP.GumpartLegacyMUL:
+                case FileType.GumpartLegacyMUL:
                     {
                         // MaxID = 0xEF3C on 7.0.8.2
                         return "build/gumpartlegacymul/{0:00000000}.tga";
                     }
-                case MUL2UOP.MapLegacyMUL:
+                case FileType.MapLegacyMUL:
                     {
                         // MaxID = 0x71 on 7.0.8.2 for Fel/Tram
                         return String.Concat("build/map", typeIndex, "legacymul/{0:00000000}.dat");
                     }
-                case MUL2UOP.SoundLegacyMUL:
+                case FileType.SoundLegacyMUL:
                     {
                         // MaxID = 0x1000 on 7.0.8.2
                         return "build/soundlegacymul/{0:00000000}.dat";
